@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<title>Example Test Runner</title>
+
+<body class="yui3-skin-sam">
+<h1>Example Test Runner</h1>
+
+<div id="test"></div>
+
+<script src="http://yui.yahooapis.com/3.4.0/build/yui/yui-min.js"></script>
+<script>
+YUI({
+    // Informs YUI where your modules live on the filesystem, 
+    // and provides module dependency metadata (yes, again).
+    modules: {
+        'example': {
+            fullpath: '../js/example.js',
+            requires: [],
+            skinnable: false
+        },
+        'example-test': {
+            fullpath: 'example-test.js',
+            requires: ['example', 'test']
+        }
+    }
+}).use('example-test', 'console', function (Y) {
+    new Y.Console().render('#test');
+    Y.Test.Runner.run();
+});
+</script>
