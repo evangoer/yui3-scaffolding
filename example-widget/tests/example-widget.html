@@ -13,20 +13,18 @@
 YUI({
     // Informs YUI where your modules live on the filesystem, 
     // and provides module dependency metadata (yes, again).
+    
+    // Hackery to allow skinning on a local filesystem. Groups 
+    // allow different modules to set a different base path.
     groups: {
         localModules: {
-            base: '../',
+            base: '../../',
             modules: {
                 'example-widget': {
-                    path: 'js/example-widget.js',
+                    path: 'example-widget/js/example-widget.js',
                     requires: ['widget', 'base-build'],
                     skinnable: true
                 },
-                /*
-                'example-css': {
-                    fullpath: '../assets/skins/sam/example.css',
-                    type: 'css'
-                },*/
             }
         },
         localTestModules: {
