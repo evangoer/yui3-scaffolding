@@ -12,15 +12,15 @@ YUI({
     // Informs YUI where your modules live on the filesystem, 
     // and provides module dependency metadata (yes, again).
     modules: {
-        'example-object': {
-            fullpath: '../js/example-object.js',
+        'example-basic': {
+            fullpath: '../js/example-basic.js',
         },
-        'example-object-test': {
-            fullpath: 'example-object-test.js',
-            requires: ['example-object', 'test']
+        'example-basic-test': {
+            fullpath: 'example-basic-test.js',
+            requires: ['example-basic', 'test']
         }
     }
-}).use('example-object-test', 'console', function (Y) {
+}).use('example-basic-test', 'console', function (Y) {
     new Y.Console().render('#test');
     Y.Test.Runner.run();
 });

@@ -1,6 +1,5 @@
-// Module names should be lower case. If you need a separator, use dashes
-// as in 'my-example', not camel case, periods, or underscores.
-YUI.add('example-object', function (Y) {  
+// Module names should be lower case and use dashes for a separator.
+YUI.add('example-basic', function (Y) {  
     // Define all module code inside this anonymous function.
     
     // A private member that will be closed over.
