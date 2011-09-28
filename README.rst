@@ -4,14 +4,15 @@ YUI Scaffolding
 A set of pre-packaged starter files for YUI module developers. For those who are 
 new to YUI, the distinction is: 
 
-* YUI module *users*: People who are wiring YUI modules into a web page: adding an 
+* YUI module **users**: People who are wiring YUI modules into a web page: adding an 
   animation effect, rendering a canned widget. People who are writing small amounts 
   of glue code inside a ``YUI().use()``.
-* YUI module *developers*: People who are building widgets and other chunks for 
+  
+* YUI module **developers**: People who are building widgets and other chunks for 
   easy reuse. People who are writing most of their code inside ``YUI.add()``.
 
 YUI Scaffolding is for people in the second category. The goal is to bootstrap your
-way to writing YUI modules _without_ forcing you to mess around with the powerful, 
+way to writing YUI modules *without* forcing you to mess around with the powerful, 
 but also finicky and poorly documented YUI Builder.
 
 Instead, you wrap your code in a hand-authored ``YUI.add()`` and just ping pong 
@@ -25,18 +26,17 @@ Template Projects
 There are three template projects. They are configured to run off the local 
 filesystem, without assuming a web server or combo loader.
 
-*example-basic*
+example-basic
     A dead-simple example object with a single ``hello()`` method and a single
     working test.
 
-*example-component*
+example-component
     An example object derived from ``Y.Base``, with a single attribute, a single
     ```hello()``` method, and a single working test.
 
-*example-widget*
+example-widget
     An example object derived from ``Y.Widget``, with a single attribute, a 
     minimal ``renderUI()``/``syncUI()`` implementation, and a single working test. 
-    
     The widget also includes a CSS file delivered by setting ``skinnable: true``. 
     This is where some serious hackery ensues, since YUI skin conventions kind of
     assume you are using the builder and have deployed to a combo loader. This
