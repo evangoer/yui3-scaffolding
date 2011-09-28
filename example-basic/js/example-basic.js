@@ -3,7 +3,7 @@ YUI.add('example-basic', function (Y) {
     // Define all module code inside this anonymous function.
     
     // A private member that will be closed over.
-    var greeting = "HELLOSKI";
+    var greeting = 'HELLOSKI';
     
     // Add public objects, methods and properties to the Y. 
     Y.Example = {};
