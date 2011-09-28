@@ -4,6 +4,8 @@
 <body class="yui3-skin-sam">
 <h1>Test Runner</h1>
 
+<div id="widget-demo"></div>
+
 <div id="test"></div>
 
 <script src="http://yui.yahooapis.com/3.4.0/build/yui/yui-min.js"></script>
@@ -17,6 +19,7 @@ YUI({
             modules: {
                 'example-widget': {
                     path: 'js/example-widget.js',
+                    requires: ['widget', 'base-build'],
                     skinnable: true
                 },
                 /*

@@ -8,12 +8,17 @@ YUI.add('example-widget-test', function (Y) {
     // For each method in the object to test, create one test case 
     // and add it to the object’s test suite. 
     suite.add(new Y.Test.Case({
-        name: 'Testing hello()',
+        name: 'Testing Y.Example greeting functionality',
 
         // For each test case, create one test function for each input-output 
         // set in the method under test.
-        testHello: function () {            
-            Y.Assert.areEqual('HELLOSKI', Y.Example.hello());
+        testCustomGreeting: function () {
+            var widget, greeting;
+            widget = new Y.Example({ greeting: 'HELLOSKI' });
+            widget.render('#widget-demo');
+            
+            greeting = Y.one('.yui3-example-widget-content .greeting');
+            Y.Assert.areEqual('HELLOSKI', greeting.getContent());
         },
     }));
     
