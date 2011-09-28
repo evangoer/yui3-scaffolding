@@ -17,7 +17,7 @@ but also finicky and poorly documented YUI Builder.
 Instead, you wrap your code in a hand-authored ``YUI.add()`` and just ping pong 
 back and forth between adding module code, writing tests, and refreshing the 
 associated test runner HTML file, without any intervening build step. As your project 
-matures, you can always migrate it over to YUI Builder. Or not. 
+matures, you can always migrate it over to YUI Builder. Or not.
 
 Template Projects
 -----------------
@@ -35,12 +35,11 @@ filesystem, without assuming a web server or combo loader.
 
 *example-widget*
     An example object derived from ``Y.Widget``, with a single attribute, a 
-    very minimal ``renderUI()``/``syncUI()`` implementation, and a single working
-    test. 
+    minimal ``renderUI()``/``syncUI()`` implementation, and a single working test. 
     
     The widget also includes a CSS file delivered by setting ``skinnable: true``. 
-    This is where some serious hackery ensues, since YUI skin conventions 
-    assume you are using the builder and have deployed to a combo loader. Here
-    the goal is to allow you to noodle away on your widget's look and feel, and 
-    decide later on whether you want to build and load assets the way the core 
-    YUI widgets do, or some other way.
+    This is where some serious hackery ensues, since YUI skin conventions kind of
+    assume you are using the builder and have deployed to a combo loader. This
+    project is set up to make it easy to just noodle away on your widget's look and 
+    feel. You can decide later on whether you want to build and load assets the way 
+    the core YUI widgets do, or some other way.
