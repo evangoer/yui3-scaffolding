@@ -16,15 +16,23 @@ YUI.add('example-widget', function (Y) {
         destructor: function () {},
         
         // Calling render() calls the following three methods in order: 
-        // 1. Set up the initial markup your widget needs.
-        renderUI: function () {},
+        // 1. Set up any initial skeleton markup your widget needs.
+        renderUI: function () {
+            // render() automatically creates a contentBox <div> for you.
+            // The contentBox attribute is a handy Y.Node reference.
+            var box = this.get('contentBox');
+            box.setContent('The widget says: <span class="greeting"/>');
+        },
         
         // 2. Bind event listeners to nodes on the page.
         bindUI: function () {},
         
         // 3. Refresh the widget's appearance according to its current state.
         //    You can call this method again in response to attribute changes.
-        syncUI: function() {}
+        syncUI: function() {
+            var greeting = this.get('contentBox').one('.greeting');
+            greeting.setContent(this.get('greeting'));
+        }
     }, {
         // Define attributes on the special ATTRS object. 
         ATTRS: {
