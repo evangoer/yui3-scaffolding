@@ -5,8 +5,16 @@ YUI.add('example-component', function (Y) {
     // Y.Base is the building block for YUI components. Here we're using
     // the Y.Base.create() sugar method rather than vanilla Y.extend().
     Y.Example = Y.Base.create('example-component', Y.Base, [], {
-        
         // Define your component's properties and methods here.
+        
+        // Custom setup logic. The constructor automatically calls all
+        // initializer() methods in this object's inheritance chain.
+        initializer: function () {},
+
+        // Custom teardown logic. Calling destroy() calls all
+        // destructor() methods in this object's inheritance chain.
+        destructor: function () {},
+        
         hello: function () {
             return this.get('greeting');
         }
