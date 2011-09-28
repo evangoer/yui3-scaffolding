@@ -14,10 +14,10 @@ YUI Scaffolding is for the developers. The goal is to help bootstrap your
 way to writing YUI modules *without* forcing you to mess around with the powerful, 
 but also finicky and poorly documented YUI Builder.
 
-Instead of going through a build/deploy cycle, you wrap your code in a hand-authored 
-``YUI.add()`` and just ping pong back and forth between adding module code, writing 
-tests, and refreshing the associated test runner HTML file. As your module matures, 
-you can always migrate it over to YUI Builder. Or not.
+Instead of going through a build/deploy cycle, the approach here is that you 
+hand-author your own ``YUI.add()`` and ping pong back and forth between adding module 
+code, writing tests, and refreshing the associated test runner HTML file. As your 
+module matures, you can always migrate it over to YUI Builder. Or not.
 
 Template Modules
 ----------------
@@ -26,20 +26,16 @@ There are three template modules. They are configured to run off the local
 filesystem, without assuming a web server or combo loader.
 
 example-basic
-
     A dead-simple example object with a single ``hello()`` method and a single
     working test.
 
 example-component
-
     An example object derived from ``Y.Base``, with a single attribute, a single
     ``hello()`` method, and a single working test.
 
 example-widget
-
     An example object derived from ``Y.Widget``, with a single attribute, a 
     minimal ``renderUI()``/``syncUI()`` implementation, and a single working test. 
-    
     The widget also includes a CSS file delivered by setting ``skinnable: true``. 
     This is where some serious hackery ensues, since YUI skin conventions kind of
     assume you are using the builder and have deployed to a combo loader. This
