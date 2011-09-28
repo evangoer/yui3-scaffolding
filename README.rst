@@ -1,5 +1,5 @@
-YUI Scaffolding
-===============
+YUI 3 Scaffolding
+=================
 
 A set of pre-packaged starter files for YUI module developers. The distinction is: 
 
@@ -19,11 +19,12 @@ hand-author your own ``YUI.add()`` and ping pong back and forth between adding m
 code, writing tests, and refreshing the associated test runner HTML file. As your 
 module matures, you can always migrate it over to YUI Builder. Or not.
 
-Template Modules
+Scaffold Modules
 ----------------
 
-There are three template modules. They are configured to run off the local 
-filesystem, without assuming a web server or combo loader.
+This project provides three flavors of scaffold modules for use in YUI projects. 
+Each module is configured to run off the local filesystem, without assuming a web 
+server or combo loader. In order of complexity:
 
 example-basic
     A dead-simple example object with a single ``hello()`` method and a single
