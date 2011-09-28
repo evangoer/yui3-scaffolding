@@ -14,28 +14,30 @@ YUI({
     // Informs YUI where your modules live on the filesystem, 
     // and provides module dependency metadata (yes, again).
     
-    // Hackery to allow skinning on a local filesystem. Groups 
-    // allow different modules to set a different base path.
+    // HACKERY to allow skinning on a local filesystem. YUI skin conventions
+    // are really designed to work with YUI Combo Loader and YUI Builder.
+    // 
+    // First, define a module group, which allows for a custom base path.
     groups: {
         localModules: {
+            // Define a goofy custom base path, used to construct the 
+            // right path to the skin file (see below).
             base: '../../',
             modules: {
                 'example-widget': {
                     path: 'example-widget/js/example-widget.js',
                     requires: ['widget', 'base-build'],
+
+                    // Setting skinnable to true means load CSS from:
+                    // {base}/{module}/assets/skins/sam/{module}.css
                     skinnable: true
                 },
-            }
-        },
-        localTestModules: {
-            base: './',
-            modules: {
                 'example-widget-test': {
-                    path: 'example-widget-test.js',
+                    path: 'example-widget/tests/example-widget-test.js',
                     requires: ['example-widget', 'test']
                 }
-            }
-        }
+            },
+        },
     } 
 }).use('example-widget-test', 'console', function (Y) {
     new Y.Console().render('#test');
