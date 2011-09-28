@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<title>Example Test Runner</title>
+<title>Test Runner</title>
 
 <body class="yui3-skin-sam">
-<h1>Example Test Runner</h1>
+<h1>Test Runner</h1>
 
 <div id="test"></div>
 
@@ -15,8 +15,8 @@ YUI({
         localModules: {
             base: '../',
             modules: {
-                'example': {
-                    path: 'js/example.js',
+                'example-widget': {
+                    path: 'js/example-widget.js',
                     skinnable: true
                 },
                 /*
@@ -29,14 +29,14 @@ YUI({
         localTestModules: {
             base: './',
             modules: {
-                'example-test': {
-                    path: 'example-test.js',
-                    requires: ['example', 'test']
+                'example-widget-test': {
+                    path: 'example-widget-test.js',
+                    requires: ['example-widget', 'test']
                 }
             }
         }
     } 
-}).use('example-test', 'console', function (Y) {
+}).use('example-widget-test', 'console', function (Y) {
     new Y.Console().render('#test');
     Y.Test.Runner.run();
 });
