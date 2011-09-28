@@ -21,7 +21,7 @@ YUI.add('example-widget', function (Y) {
             // render() automatically creates a contentBox <div> for you.
             // The contentBox attribute is a handy Y.Node reference.
             var box = this.get('contentBox');
-            box.setContent('The widget says: <span class="greeting"/>');
+            box.setContent('Y.Example says: <span class="greeting"></span>!');
         },
         
         // 2. Bind event listeners to nodes on the page.
