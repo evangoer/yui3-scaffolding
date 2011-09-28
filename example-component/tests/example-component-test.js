@@ -12,8 +12,10 @@ YUI.add('example-component-test', function (Y) {
 
         // For each test case, create one test function for each input-output 
         // set in the method under test.
-        testHello: function () {            
-            Y.Assert.areEqual('HELLOSKI', Y.Example.hello());
+        testHello: function () {
+            // Override the default greeting in the constructor
+            var example = new Y.Example({ greeting: 'HELLOSKI' });       
+            Y.Assert.areEqual('HELLOSKI', example.hello());
         },
     }));
     
