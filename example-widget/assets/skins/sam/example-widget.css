@@ -1,2 +1,32 @@
-/* */
-.yui3-skin-sam .greeting { color: #f00; }
+/* CORE STYLES + 'SAM' SKIN STYLES
+ * 
+ * If you set skinnable: true for a module, YUI tries to load a file 
+ * using the path: {base}/{module}/assets/skins/sam/{module}.css. 
+ *
+ * In production-quality YUI code, the YUI Builder would automatically 
+ * generate this file for you from other CSS files in your src tree: 
+ * 'example-widget-core.css' and 'example-widget-skin.css'. 
+ * Instead, we're skipping YUI Builder (for now) and just adding CSS 
+ * directly to the file that YUI Builder would have built for us. 
+ * 
+ * Another option is to ignore YUI conventions around skins and just 
+ * load CSS as a YUI module (type: 'css'). Then you can lay out your 
+ * CSS assets however you like.
+ */
+
+/* All core structural styles for the widget, such as display, margin, 
+   padding, widths, 
+   
+   If you're using YUI Builder, these styles would be automatically
+   minified and concatenated into this file, from the source file
+   assets/example-widget-core.css.*/
+.yui3-example-widget { padding: 5px; }
+
+
+/* All styles for the widget that are specific to the 'sam' skin,
+   such as color and background.
+   
+   If you're using YUI Builder, these styles would be automatically
+   minified and concatenated into this file, from the source file
+   assets/skins/sam/example-widget-skin.css. */
+.yui3-skin-sam .yui3-example-widget .greeting { color: #f00; }
