@@ -19,5 +19,5 @@ YUI.add('example', function (Y) {
     requires: [], 
     
     // Remove or set to false if your component does not have a skin.
-    skinnable: false
+    skinnable: true
 });
