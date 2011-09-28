@@ -11,32 +11,16 @@
 YUI({
     // Informs YUI where your modules live on the filesystem, 
     // and provides module dependency metadata (yes, again).
-    groups: {
-        localModules: {
-            base: '../',
-            modules: {
-                'example-widget': {
-                    path: 'js/example-widget.js',
-                    skinnable: true
-                },
-                /*
-                'example-css': {
-                    fullpath: '../assets/skins/sam/example.css',
-                    type: 'css'
-                },*/
-            }
+    modules: {
+        'example-object': {
+            fullpath: '../js/example-object.js',
         },
-        localTestModules: {
-            base: './',
-            modules: {
-                'example-widget-test': {
-                    path: 'example-widget-test.js',
-                    requires: ['example-widget', 'test']
-                }
-            }
+        'example-object-test': {
+            fullpath: 'example-object-test.js',
+            requires: ['example-object', 'test']
         }
-    } 
-}).use('example-widget-test', 'console', function (Y) {
+    }
+}).use('example-object-test', 'console', function (Y) {
     new Y.Console().render('#test');
     Y.Test.Runner.run();
 });

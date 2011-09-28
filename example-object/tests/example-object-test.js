@@ -1,6 +1,6 @@
 // YUI Test JS code is also in its own module. This module uses a
 // simple, direct pattern for organizing tests:
-YUI.add('example-widget-test', function (Y) {
+YUI.add('example-object-test', function (Y) {
         
     // For each object you need to test, create one test suite.
     var suite = new Y.Test.Suite('Test Suite for Y.Example');
@@ -18,4 +18,4 @@ YUI.add('example-widget-test', function (Y) {
     }));
     
     Y.Test.Runner.add(suite);
-}, "1.0", { requires: ['example-widget', 'test'] });
+}, "1.0", { requires: ['example-object', 'test'] });
